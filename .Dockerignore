@@ -1,0 +1,15 @@
+node_modules
+dist
+test-result
+allure-results
+allure-report
+reports
+*.log
+npm-debug.log
+.DS_Store
+.git
+.gitignore
+.vscode
+coverage
+.env
+*.tgz

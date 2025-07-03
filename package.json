@@ -1,0 +1,25 @@
+{
+  "name": "cucumber-framework",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "cucumber-js src/test/features"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@cucumber/cucumber": "^11.3.0",
+    "@cucumber/messages": "^27.2.0",
+    "@playwright/test": "^1.53.1",
+    "@types/debug": "^4.1.12",
+    "@types/node": "^24.0.7",
+    "allure-cucumberjs": "^2.0.0-beta.15",
+    "allure-js-commons": "^2.0.0-beta.16",
+    "ts-node": "^10.9.2"
+  },
+  "dependencies": {
+    "debug": "^4.4.1"
+  }
+}
