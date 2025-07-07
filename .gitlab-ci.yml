@@ -1,0 +1,57 @@
+stages:
+  - build
+  - send-report
+
+variables:
+  IMAGE_NAME: playwright-runner:latest
+  REPORT_PATH: test-result/report/cucumber-report.html
+
+default:
+  image: docker:20
+  services:
+    - docker:dind
+
+before_script:
+  - docker info
+
+# 🛠️ Build image and run tests inside container
+build:
+  stage: build
+  script:
+    - echo "🔧 Building Docker image..."
+    - docker build -t $IMAGE_NAME .
+    - echo "🚀 Running tests inside container..."
+    - docker run --rm -v $CI_PROJECT_DIR/test-result:/app/test-result $IMAGE_NAME
+  artifacts:
+    name: "Cucumber Report"
+    when: always
+    paths:
+      - $REPORT_PATH
+    expire_in: 1 week
+
+# 📧 Send report via email
+send-report:
+  stage: send-report
+  image: alpine:latest
+  dependencies:
+    - build
+  before_script:
+    - apk add --no-cache mutt msmtp ca-certificates
+    - echo "defaults" > ~/.msmtprc
+    - echo "auth on" >> ~/.msmtprc
+    - echo "tls on" >> ~/.msmtprc
+    - echo "tls_trust_file /etc/ssl/certs/ca-certificates.crt" >> ~/.msmtprc
+    - echo "logfile ~/.msmtp.log" >> ~/.msmtprc
+    - echo "account default" >> ~/.msmtprc
+    - echo "host smtp.gmail.com" >> ~/.msmtprc
+    - echo "port 587" >> ~/.msmtprc
+    - echo "from $SMTP_USER" >> ~/.msmtprc
+    - echo "user $SMTP_USER" >> ~/.msmtprc
+    - echo "password $SMTP_PASS" >> ~/.msmtprc
+    - chmod 600 ~/.msmtprc
+    - echo "set sendmail=\"/usr/bin/msmtp\"" > ~/.muttrc  # ✅ Tells mutt to use msmtp
+  script:
+    - echo "Playwright + Cucumber Test Report is attached." > email.txt
+    - mutt -s "GitLab CI Test Report" -a "$REPORT_PATH" -- "$SMTP_TO" < email.txt
+  when: always
+

@@ -1870,3 +1870,71 @@ waiting for navigation to "**/inventory" until "load"
 [2025-07-03T10:14:45.863Z] [cucumber:actions] Checking visibility of Login Error Alert
 [2025-07-03T10:14:45.865Z] [cucumber:steps] Error message is visible.
 [2025-07-03T10:14:45.865Z] [cucumber:steps] [Login with invalid credentials] Step PASSED: I should see an error message
+[2025-07-04T07:34:59.018Z] [cucumber:steps] .........Navigating to login page........
+[2025-07-04T07:34:59.019Z] [cucumber:loginpage] Navigating to login page...
+[2025-07-04T07:34:59.350Z] [cucumber:loginpage] Navigation complete.
+[2025-07-04T07:34:59.350Z] [cucumber:steps] Navigation complete.
+[2025-07-04T07:34:59.350Z] [cucumber:steps] [Login and Logout with valid credentials] Step PASSED: I am on the login page
+[2025-07-04T07:34:59.351Z] [cucumber:steps] Entering username...
+[2025-07-04T07:34:59.351Z] [cucumber:actions] Filling Username Input with value: standard_user
+[2025-07-04T07:34:59.381Z] [cucumber:steps] Username entered.
+[2025-07-04T07:34:59.381Z] [cucumber:steps] [Login and Logout with valid credentials] Step PASSED: I enter valid email
+[2025-07-04T07:34:59.382Z] [cucumber:steps] Entering password...
+[2025-07-04T07:34:59.382Z] [cucumber:actions] Filling Password Input with value: secret_sauce
+[2025-07-04T07:34:59.425Z] [cucumber:steps] Password entered.
+[2025-07-04T07:34:59.426Z] [cucumber:steps] [Login and Logout with valid credentials] Step PASSED: I enter valid password
+[2025-07-04T07:34:59.426Z] [cucumber:steps] Clicking the submit button...
+[2025-07-04T07:34:59.426Z] [cucumber:actions] Clicking Submit Button
+[2025-07-04T07:34:59.515Z] [cucumber:steps] Submit button clicked.
+[2025-07-04T07:34:59.515Z] [cucumber:steps] [Login and Logout with valid credentials] Step PASSED: I click on the submit button
+[2025-07-04T07:34:59.516Z] [cucumber:steps] Checking if user is at dashboard...
+[2025-07-04T07:34:59.516Z] [cucumber:actions] Waiting for URL: **/v1/inventory*
+[2025-07-04T07:34:59.615Z] [cucumber:steps] User is at dashboard.
+[2025-07-04T07:34:59.615Z] [cucumber:steps] [Login and Logout with valid credentials] Step PASSED: I should be logged in and see the dashboard
+[2025-07-04T07:34:59.615Z] [cucumber:steps] Clicking the logout button...
+[2025-07-04T07:34:59.615Z] [cucumber:actions] Clicking User Profile Avatar
+[2025-07-04T07:34:59.658Z] [cucumber:actions] Clicking Sign Out Button
+[2025-07-04T07:35:00.638Z] [cucumber:steps] Logout button clicked.
+[2025-07-04T07:35:00.638Z] [cucumber:steps] [Login and Logout with valid credentials] Step PASSED: I click on the logout button
+[2025-07-04T07:35:00.911Z] [cucumber:steps] .........Navigating to login page........
+[2025-07-04T07:35:00.911Z] [cucumber:loginpage] Navigating to login page...
+[2025-07-04T07:35:01.038Z] [cucumber:loginpage] Navigation complete.
+[2025-07-04T07:35:01.038Z] [cucumber:steps] Navigation complete.
+[2025-07-04T07:35:01.038Z] [cucumber:steps] [Login with invalid credentials] Step PASSED: I am on the login page
+[2025-07-04T07:35:01.039Z] [cucumber:steps] Entering email: problem_user
+[2025-07-04T07:35:01.039Z] [cucumber:actions] Filling Username Input with value: problem_user
+[2025-07-04T07:35:01.057Z] [cucumber:steps] Email entered.
+[2025-07-04T07:35:01.057Z] [cucumber:steps] [Login with invalid credentials] Step PASSED: I enter email "problem_user"
+[2025-07-04T07:35:01.058Z] [cucumber:steps] Entering password: wrongpass123
+[2025-07-04T07:35:01.058Z] [cucumber:actions] Filling Password Input with value: wrongpass123
+[2025-07-04T07:35:01.091Z] [cucumber:steps] Password entered.
+[2025-07-04T07:35:01.091Z] [cucumber:steps] [Login with invalid credentials] Step PASSED: I enter password "wrongpass123"
+[2025-07-04T07:35:01.091Z] [cucumber:steps] Clicking the submit button...
+[2025-07-04T07:35:01.092Z] [cucumber:actions] Clicking Submit Button
+[2025-07-04T07:35:01.127Z] [cucumber:steps] Submit button clicked.
+[2025-07-04T07:35:01.127Z] [cucumber:steps] [Login with invalid credentials] Step PASSED: I click on the submit button
+[2025-07-04T07:35:01.127Z] [cucumber:steps] Checking for error message
+[2025-07-04T07:35:01.128Z] [cucumber:actions] Checking visibility of Login Error Alert
+[2025-07-04T07:35:01.129Z] [cucumber:steps] Error message is visible.
+[2025-07-04T07:35:01.129Z] [cucumber:steps] [Login with invalid credentials] Step PASSED: I should see an error message
+[2025-07-04T07:35:01.244Z] [cucumber:steps] .........Navigating to login page........
+[2025-07-04T07:35:01.244Z] [cucumber:loginpage] Navigating to login page...
+[2025-07-04T07:35:01.409Z] [cucumber:loginpage] Navigation complete.
+[2025-07-04T07:35:01.409Z] [cucumber:steps] Navigation complete.
+[2025-07-04T07:35:01.409Z] [cucumber:steps] [Login with invalid credentials] Step PASSED: I am on the login page
+[2025-07-04T07:35:01.410Z] [cucumber:steps] Entering email: loganathan
+[2025-07-04T07:35:01.410Z] [cucumber:actions] Filling Username Input with value: loganathan
+[2025-07-04T07:35:01.427Z] [cucumber:steps] Email entered.
+[2025-07-04T07:35:01.427Z] [cucumber:steps] [Login with invalid credentials] Step PASSED: I enter email "loganathan"
+[2025-07-04T07:35:01.427Z] [cucumber:steps] Entering password: secret_sauce
+[2025-07-04T07:35:01.427Z] [cucumber:actions] Filling Password Input with value: secret_sauce
+[2025-07-04T07:35:01.465Z] [cucumber:steps] Password entered.
+[2025-07-04T07:35:01.466Z] [cucumber:steps] [Login with invalid credentials] Step PASSED: I enter password "secret_sauce"
+[2025-07-04T07:35:01.466Z] [cucumber:steps] Clicking the submit button...
+[2025-07-04T07:35:01.466Z] [cucumber:actions] Clicking Submit Button
+[2025-07-04T07:35:01.493Z] [cucumber:steps] Submit button clicked.
+[2025-07-04T07:35:01.493Z] [cucumber:steps] [Login with invalid credentials] Step PASSED: I click on the submit button
+[2025-07-04T07:35:01.493Z] [cucumber:steps] Checking for error message
+[2025-07-04T07:35:01.493Z] [cucumber:actions] Checking visibility of Login Error Alert
+[2025-07-04T07:35:01.495Z] [cucumber:steps] Error message is visible.
+[2025-07-04T07:35:01.495Z] [cucumber:steps] [Login with invalid credentials] Step PASSED: I should see an error message
